@@ -39,5 +39,18 @@ int main(void) {
   }
 }
 
-
+float mc_pi(int n){
+   float val;
+   int inside=0;
+   for (int i=n;i>0;i--){
+     float x=frandom();
+     float y=frandom();
+     float d= sqrt(pow(x,2)+pow(y,2));
+       if (d<=1){
+         inside++;
+       }
+   }
+   val=4*(float)inside/n;
+   return val;
+}
 
